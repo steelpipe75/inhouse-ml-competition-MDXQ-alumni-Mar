@@ -30,7 +30,7 @@ def exercise() -> None:
         height=iframe_height,
     )
     st.link_button(
-        ":material/tab: エクササイズを別タブで開く",
+        ":material/tab: Exercise を別タブで開く",
         url=EXERCISE_PAGE_URL,
     )
 
