@@ -41,7 +41,7 @@ def get_APP_NAVIGATION_PAGES():
 
 
 # --- Page Settings ---
-PAGE_TITLE = "内輪向け機械学習コンペアプリ"
+PAGE_TITLE = "マナビDXクエスト alumni 内輪向け機械学習コンペアプリ"
 
 # --- Auth Settings ---
 try:
@@ -64,7 +64,7 @@ else:
 
 # --- Competition Settings ---
 IS_COMPETITION_RUNNING = (
-    False  # コンペ開催中かどうかのフラグ（True:開催中, False:終了後）
+    True  # コンペ開催中かどうかのフラグ（True:開催中, False:終了後）
 )
 
 # --- Data Store Settings ---
