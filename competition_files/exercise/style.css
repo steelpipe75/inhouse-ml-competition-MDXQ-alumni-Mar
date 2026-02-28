@@ -1,0 +1,75 @@
+/*
+Based on pythonja (MIT License)
+https://github.com/nodai2hITC/pythonja
+*/
+
+.CodeMirror {
+    border: solid 1px #999;
+    height: auto;
+    resize: vertical;
+    font-size: 16px;
+    font-family: "Consolas", "Menlo", monospace;
+    overflow-y: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+p.menu {
+    float: right;
+}
+
+button img {
+    width: 1em;
+    height: 1em;
+}
+
+button .material-symbols-outlined {
+    vertical-align: -0.2em;
+    font-size: 1.2em;
+    margin-right: 0.2em;
+}
+
+#output {
+    border: solid 1px #999;
+    margin: 0;
+    padding: 0.2em;
+    height: 20em;
+    resize: vertical;
+    overflow: auto;
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+#output .original_error {
+    color: #f00;
+}
+
+#output .caution {
+    color: #666;
+}
+
+#output .error_type {
+    background-color: #f00;
+    color: #fff;
+    padding: 0.2em;
+    line-height: 1.4em;
+    font-weight: bold;
+}
+
+#output .location {
+    font-weight: bold;
+}
+
+#output .script {
+    color: #090;
+}
+
+canvas#turtle {
+    width: 600px;
+    height: 600px;
+    margin-left: 8px;
+    float: right;
+    border: solid 1px black;
+}
