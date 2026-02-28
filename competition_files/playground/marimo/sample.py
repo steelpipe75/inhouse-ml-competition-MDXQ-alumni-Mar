@@ -12,7 +12,7 @@
 
 import marimo
 
-__generated_with = "unknown"
+__generated_with = "0.20.2"
 app = marimo.App(width="full")
 
 
@@ -356,7 +356,7 @@ def _(mo):
 
 @app.cell
 def _(pl, submit, y_pred_test):
-    my_submit = submit.with_columns(pl.Series("target", y_pred_test))
+    my_submit = submit.with_columns(pl.Series("ice_sales", y_pred_test))
     return (my_submit,)
 
 
