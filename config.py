@@ -26,8 +26,13 @@ def _get_NAVIGATION_PAGES():
 def get_APP_NAVIGATION_PAGES():
     APP_NAVIGATION_PAGES = _get_NAVIGATION_PAGES() + [
         st.Page(
+            "competition_files/contents/exercise.py",
+            title="Exercise",
+            icon=":material/exercise:",
+        ),
+        st.Page(
             "competition_files/contents/playground.py",
-            title="playground",
+            title="Playground",
             icon=":material/terminal:",
         ),
     ]

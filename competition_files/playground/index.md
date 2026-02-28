@@ -5,3 +5,7 @@
 - [JupyterLite](./JupyterLite/)
 - [marimo](./marimo/)
 - [Colab](COLAB_LINK_PLACEHOLDER)
+
+## exercise用
+
+- [Exercise](./exercise)
