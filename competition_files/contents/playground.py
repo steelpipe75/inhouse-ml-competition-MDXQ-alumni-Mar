@@ -6,12 +6,14 @@ from utils import page_config, check_password
 
 # --- Playground Page Settings ---
 PLAYGROUND_PAGE_URL_JUPYTERLITE = (
-    "https://steelpipe75.github.io/inhouse-ml-competition/JupyterLite/"
+    "https://steelpipe75.github.io/inhouse-ml-competition-MDXQ-alumni-Mar/JupyterLite/lab/"
 )
 PLAYGROUND_PAGE_URL_MARIMO = (
-    "https://steelpipe75.github.io/inhouse-ml-competition/marimo/"
+    "https://steelpipe75.github.io/inhouse-ml-competition-MDXQ-alumni-Mar/marimo/"
 )
-PLAYGROUND_PAGE_URL_COLAB = "https://colab.research.google.com/github/steelpipe75/inhouse-ml-competition/blob/main/competition_files/playground/Colab/sample.ipynb"
+PLAYGROUND_PAGE_URL_COLAB = (
+    "https://colab.research.google.com/github/steelpipe75/inhouse-ml-competition-MDXQ-alumni-Mar/blob/main/competition_files/playground/Colab/sample.ipynb"
+)
 
 page_config()
 

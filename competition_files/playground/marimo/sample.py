@@ -12,7 +12,7 @@
 
 import marimo
 
-__generated_with = "0.19.9"
+__generated_with = "unknown"
 app = marimo.App(width="full")
 
 
@@ -179,9 +179,15 @@ def _(mo):
 
 
 @app.cell
-def _(train_df):
-    X = train_df[["a", "b"]]
-    y = train_df["c"]
+def _():
+    features = ["temperature", "sunshine_h", "humidity"]
+    return (features,)
+
+
+@app.cell
+def _(features, train_df):
+    X = train_df[features]
+    y = train_df["ice_sales"]
     return X, y
 
 
@@ -198,8 +204,8 @@ def _(y):
 
 
 @app.cell
-def _(test_df):
-    X_test = test_df[["a", "b"]]
+def _(features, test_df):
+    X_test = test_df[features]
     return (X_test,)
 
 
