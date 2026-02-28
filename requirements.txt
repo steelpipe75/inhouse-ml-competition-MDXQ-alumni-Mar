@@ -1,0 +1,15 @@
+streamlit
+numpy
+gspread
+gspread-dataframe
+google-auth-oauthlib
+streamlit-screen-stats
+streamlit-browser-session-storage
+streamlit-local-storage
+Authlib
+plotly
+sqlalchemy
+mysql-connector-python
+psycopg2-binary
+openpyxl
+toml
