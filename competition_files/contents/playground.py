@@ -17,7 +17,7 @@ PLAYGROUND_PAGE_URL_COLAB = (
 
 page_config()
 
-st.title(":material/terminal: playground")
+st.title(":material/terminal: Playground")
 
 # 認証チェック
 check_password()
