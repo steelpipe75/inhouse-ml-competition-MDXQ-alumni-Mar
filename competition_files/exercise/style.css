@@ -32,6 +32,8 @@ button .material-symbols-outlined {
 }
 
 #output {
+    background-color: #fff;
+    color: #000;
     border: solid 1px #999;
     margin: 0;
     padding: 0.2em;
