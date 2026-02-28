@@ -67,7 +67,7 @@ IS_COMPETITION_RUNNING = (
 DATA_STORE_TYPE = "google_sheet"
 
 # Google Sheets specific settings
-SPREADSHEET_NAME = "sample_spreadsheets"  # ここにスプレッドシート名を入力してください
+SPREADSHEET_NAME = "inhouse-ml-compe-MDXQ-alumni-2026-Mar"  # ここにスプレッドシート名を入力してください
 LEADERBOARD_WORKSHEET_NAME = "leaderboard"  # リーダーボード用のワークシート名
 GROUND_TRUTH_WORKSHEET_NAME = "ground_truth"  # 正解データ用のワークシート名
 
@@ -153,25 +153,27 @@ LEADERBOARD_HEADER: List[str] = [
     "submission_time",
     "is_competition_running",
 ] + _additional_columns
-GROUND_TRUTH_HEADER: List[str] = ["id", "target", "Usage"]
+GROUND_TRUTH_HEADER: List[str] = ["id", "ice_sales", "Usage"]
 
 
 # --- Scoring Function ---
 def score_submission(pred_df: pd.DataFrame, gt_df: pd.DataFrame) -> Tuple[float, float]:
-    """public/privateスコアを返す (例:MAE)"""
+    """public/privateスコアを返す (RMSE)"""
     merged = pred_df.merge(gt_df, on="id", suffixes=("_pred", ""))
 
     public_mask = merged["Usage"] == "Public"
     private_mask = merged["Usage"] == "Private"
 
-    public_score = np.mean(
-        np.abs(
-            merged.loc[public_mask, "target_pred"] - merged.loc[public_mask, "target"]
+    public_score = np.sqrt(
+        np.mean(
+            (merged.loc[public_mask, "ice_sales_pred"] - merged.loc[public_mask, "ice_sales"])
+            ** 2
         )
     )
-    private_score = np.mean(
-        np.abs(
-            merged.loc[private_mask, "target_pred"] - merged.loc[private_mask, "target"]
+    private_score = np.sqrt(
+        np.mean(
+            (merged.loc[private_mask, "ice_sales_pred"] - merged.loc[private_mask, "ice_sales"])
+            ** 2
         )
     )
 
@@ -188,8 +190,8 @@ def read_ground_truth() -> pd.DataFrame:
     # データ型の変換
     if "id" in df.columns:
         df["id"] = pd.to_numeric(df["id"], errors="coerce")
-    if "target" in df.columns:
-        df["target"] = pd.to_numeric(df["target"], errors="coerce")
+    if "ice_sales" in df.columns:
+        df["ice_sales"] = pd.to_numeric(df["ice_sales"], errors="coerce")
     return df
 
 

@@ -1,18 +1,22 @@
-### :material/problem: タスク概要
+本コンペティションでは、ビーチの気象条件からその日のアイスクリーム売上個数を予測する回帰問題です。
+気温・日照時間・湿度の3つの特徴量から、1日あたりの売上個数 ice_sales を予測してください。
 
-このページはカスタマイズ可能です。
+- **入力**：
+  - id, temperature, sunshine_h, humidity, ice_sales からなる訓練用データ（train.csv）
+  - id, temperature, sunshine_h, humidity からなるテストデータ（test.csv）
 
-- この内容は `competition_files/content/problem.md` を編集することで変更できます。
+- **出力**：
+  - 各 id の売上個数の予測値 ice_sales（sample_submission.csv 形式）
 
----
+- **評価指標**：
+  - RMSE (Root Mean Square Error)
 
-### :material/task: 予測タスクの説明
+### :material/table_chart: 特徴量の説明
 
-本コンペティションでは、与えられた特徴量 `a`, `b`, `c` から目的変数 `target` を予測します。
-
-- 入力：
-  - `id`, `a`, `b`, `c` からなるテストデータ（`test.csv`）
-- 出力：
-  - 各 `id` に対する予測値 `target`（`sample_submission.csv` 形式）
-- 評価指標：
-  - MAE（Mean Absolute Error）
+| 列名 | 説明 | 単位 |
+|------|-----|------|
+| id | 各行のユニークID | - |
+| temperature | その日の最高気温 | °C |
+| sunshine_h | その日の日照時間 | 時間 |
+| humidity | その日の湿度 | % |
+| ice_sales | アイスクリームの1日あたり売上個数（目的変数） | 個 |

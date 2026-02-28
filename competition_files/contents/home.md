@@ -1,19 +1,15 @@
 ## :material/waving_hand: ようこそ！
 
-このページはカスタマイズ可能です。
-
-- サイドバーから各ページに移動できます。
-- この内容は `competition_files/content/home.md` を編集することで変更できます。
+マナビDXクエスト alumni 内輪向けの機械学習コンペ です。
 
 ---
 
-### :material/edit_document: サンプル
+### :material/edit_document: 期間
 
-- ここにお知らせやルールなどを自由に記載できます。
-- Markdown記法が使えます。
+～ 2026年 3月21日(土) 20:00 終了
 
 ---
 
 ### :material/key: 合言葉
 
-投稿、リーダーボードページの合言葉は `test` です。
+投稿、リーダーボードページの合言葉は Slackの `# b_自主イベント告知` チャンネルに投稿しました。
