@@ -20,3 +20,8 @@
 | sunshine_h | その日の日照時間 | 時間 |
 | humidity | その日の湿度 | % |
 | ice_sales | アイスクリームの1日あたり売上個数（目的変数） | 個 |
+
+## コンペ終了後公開ファイル
+
+- **answer.csv**: 正解データ
+- **generate_competition_data.py**: 問題データ作成ソース

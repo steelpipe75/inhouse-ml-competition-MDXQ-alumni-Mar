@@ -64,7 +64,7 @@ else:
 
 # --- Competition Settings ---
 IS_COMPETITION_RUNNING = (
-    True  # コンペ開催中かどうかのフラグ（True:開催中, False:終了後）
+    False  # コンペ開催中かどうかのフラグ（True:開催中, False:終了後）
 )
 
 # --- Data Store Settings ---
